@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <table class="table-list">
+    <thead>
+      <tr>
+        <th>ลำดับ</th>
+        <th>ชื่อ</th>
+        <th>คะแนน</th>
+        <th>เกรด</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>สมชาย</td>
+        <td id="rnum1"></td>
+        <td id="rgr1">-</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>สมหญิง</td>
+        <td id="rnum2"></td>
+        <td id="rgr2">-</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>สมศรี</td>
+        <td id="rnum3"></td>
+        <td id="rgr3">-</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>สมจิตรา</td>
+        <td id="rnum4"></td>
+        <td id="rgr4">-</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>สมเกียรติ</td>
+        <td id="rnum5"></td>
+        <td id="rgr5">-</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>สมบัติ</td>
+        <td id="rnum6"></td>
+        <td id="rgr6">-</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>สมฤดี</td>
+        <td id="rnum7"></td>
+        <td id="rgr7">-</td>
+    </tr>
+    
+    <tr>
+        <td>8</td>
+        <td>สมจิตร</td>
+        <td id="rnum8"></td>
+        <td id="rgr8">-</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br />
+  <button id="myButton">คำนวณเกรด</button>
+
+  <script>
+    const Grading = document.getElementById('myButton');
+
+    function calculateGrade(score) {
+        if (score >= 80) return 'A';
+        else if (score >= 70) return 'B';
+        else if (score >= 60) return 'C';
+        else if (score >= 50) return 'D';
+        else return 'F';
+    }
+
+    Grading.addEventListener('click', function () {
+      for (let i = 1; i <= 8; i++) {
+        const score = Math.floor(Math.random() * (100 - 40 + 1)) + 40;
+        document.getElementById(`rnum${i}`).innerText = score;
+        document.getElementById(`rgr${i}`).innerText = calculateGrade(score);
+      }
+    });
+  </script>
+
+</body>
+</html>
