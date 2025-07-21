@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การคูณเลข</title>
+    <link rel="stylesheet" href="style.css">
+    <script src = 'script.js'></script>
+</head>
+<body>
+    <h1>ป้อนเลขสูตรคูณ [1-12]:</h1>
+    <!-- ส่วนหัว  -->
+    <div class = 'header'>
+        <input type="text" id="number"/>
+        <button onclick="multiple()">แสดงผลคูณ</button>
+    </div>
+
+    <!-- ส่วนของตาราง -->
+    <div class = 'time-table'>
+        <table>
+            <thead>
+                <tr>
+                    <th>เลขคูณ</th>
+                    <th>ผลคูณ</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- ใส่ผลลัพธ์ -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
