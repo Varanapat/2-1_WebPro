@@ -54,6 +54,6 @@ function validateForm() {
             return false;
         }
 
-        alert("ข้อมูลถูกต้องแล้ว");
+        alert("ข้อมูลถูกต้องแล้ว ✅");
         return true;
     }

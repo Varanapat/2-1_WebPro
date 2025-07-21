@@ -1,70 +1,59 @@
-
 body {
-    background: linear-gradient(135deg, #2e4b4f, #8aaa66);
-    font-family: 'Sarabun', sans-serif;
-    color: #333;
-    padding: 40px 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f1f1df;
+    margin: 0;
+    padding: 0;
 }
+
 .container {
-    max-width: 650px;
-    background-color: #eef2db;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.15);
-    border: 2px solid #d0e9ff;
+    width: 500px;
+    margin: 40px auto;
+    background-color: #eacaca;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border: solid 2px #c38d8d;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 30px;
-    color: #007bff;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
     font-weight: bold;
 }
 
-.form-control,
-.form-select,
-textarea {
-    border-radius: 12px;
-    border: 1px solid #b6d4fe;
-    background-color: #f9fcff;
-    transition: all 0.3s ease;
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
 }
 
-.form-control:focus,
-.form-select:focus,
-textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
-    background-color: #ffffff;
-}
-
-/* ป้ายชื่อช่องกรอก */
-.form-floating > label {
-    padding-left: 0.75rem;
-    color: #555;
-}
-
-button.btn-primary {
+button {
     width: 100%;
     padding: 12px;
-    font-size: 16px;
-    border-radius: 10px;
-    background-color: #007bff;
+    background-color: #5ba1ed;
+    color: #dafdff;
     border: none;
-    box-shadow: 0 4px 12px rgba(37, 64, 94, 0.2);
-    transition: background-color 0.3s ease, transform 0.1s ease;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-button.btn-primary:hover {
+button:hover {
     background-color: #0056b3;
-    transform: translateY(-1px);
 }
 
-button.btn-primary:active {
-    transform: translateY(1px);
-}
-
-
-textarea.form-control {
-    height: 100px;
+.error {
+    color: red;
+    font-size: 0.9em;
 }
