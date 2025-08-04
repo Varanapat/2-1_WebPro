@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="532.62402"
+   height="478.57001"
+   viewBox="0 0 532.624 478.57"
+   id="svg2">
+  <defs
+     id="defs4">
+    <linearGradient
+       x1="-819.20001"
+       y1="746.16852"
+       x2="819.20001"
+       y2="746.16852"
+       id="SVGID_2_"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.2057,0,0,0.26,193.8299,88.5959)">
+      <stop
+         id="stop13"
+         style="stop-color:#0085b8;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop15"
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="-819.20001"
+       y1="478.47659"
+       x2="819.20007"
+       y2="478.47659"
+       id="SVGID_1_"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.2057,0,0,0.26,188.0799,88.5959)">
+      <stop
+         id="stop6"
+         style="stop-color:#0085b8;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop8"
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+  </defs>
+  <rect
+     width="533"
+     height="479"
+     x="-7.6430088e-06"
+     y="-0.43000001"
+     id="rect2292"
+     style="fill:#ffffff" />
+  <g id="g3">
+    <path
+       d="M 362.4,24 L 362.4,0 L 76.8,0 C 72.8,0 70.8,2 70.8,6 L 70.8,45.6 L 6,45.6 C 2,45.6 0,47.6 0,51.6 L 0,316.8 C 0,320.8 2,322.8 6,322.8 L 64.8,322.8 L 64.8,378 C 64.8,382 66.8,384 70.8,384 L 103.2,384 L 103.2,420 C 103.2,424 105.2,426 109.2,426 L 362.4,426 L 362.4,399.6 L 129.6,399.6 L 129.6,334.8 L 158.4,334.8 L 158.4,375.6 C 158.4,379.6 160.4,381.6 164.4,381.6 L 362.4,381.6 L 362.4,355.2 L 183.6,355.2 L 183.6,300 L 201.2,300 L 201.2,272.5 L 164.4,272.5 C 160.4,272.5 158.4,274.5 158.4,278.5 L 158.4,308.4 L 109.2,308.4 C 105.2,308.4 103.2,310.4 103.2,314.4 L 103.2,356.4 L 90,356.4 L 90,222 L 351.4,222 L 351.4,196.8 L 70.8,196.8 C 66.8,196.8 64.8,198.8 64.8,202.8 L 64.8,295.2 L 30,295.2 L 30,72 L 70.8,72 L 70.8,116.5 C 70.8,120.5 72.8,122.5 76.8,122.5 L 166.8,122.5 L 166.8,157.3 C 166.8,161.3 168.8,163.3 172.8,163.3 L 362.4,163.3 L 362.4,136.8 L 192,136.8 L 192,76.8 L 362.4,76.8 L 362.4,52.8 L 172.8,52.8 C 168.8,52.8 166.8,54.8 166.8,58.8 L 166.8,92.5 L 100.8,92.5 L 100.8,51.6 C 100.8,50.5 100.7,49.5 100.3,48.6 C 100.7,47.8 100.8,46.8 100.8,45.6 L 100.8,24 L 362.4,24 z"
+       id="path10"
+       style="fill:url(#SVGID_1_)" />
+    <path
+       d="M 351.4,266.5 L 351.4,241.2 L 209.7,241.2 C 205.7,241.2 203.7,243.2 203.7,247.2 L 203.7,272.5 L 201.2,272.5 L 201.2,300 L 203.7,300 L 203.7,318 C 203.7,322 205.7,324 209.7,324 L 351.4,324 L 351.4,300 L 230.1,300 L 230.1,266.5 L 351.4,266.5 z"
+       id="path17"
+       style="fill:url(#SVGID_2_)" />
+  </g>
+  <g id="text" style="font-family:ArialMT, Arial" >
+    <text
+       transform="translate(15.45,63.6001)"
+       id="text21"
+       style="font-size:10px">No anal fin</text>
+    <text
+       transform="translate(6.45,311.5)"
+       id="text23"
+       style="font-size:10px">Anal fin present</text>
+    <text
+       transform="translate(87.1001,16.5)"
+       id="text25"
+       style="font-size:10px">Body flattened, raylike, mouth terminal</text>
+    <text
+       transform="translate(86.4502,104.5498)"
+       id="text27"
+       style="font-size:10px">Body not raylike,</text>
+    <text
+       transform="translate(86.4502,117.6997)"
+       id="text29"
+       style="font-size:10px">mouth ventral</text>
+    <text
+       transform="translate(182.75,68.5498)"
+       id="text31"
+       style="font-size:10px">Snout elongated, sawlike</text>
+    <text
+       transform="translate(182.4502,152.7998)"
+       id="text33"
+       style="font-size:10px">Snout short, not sawlike</text>
+    <text
+       transform="translate(93.1001,212.5498)"
+       id="text35"
+       style="font-size:10px">6 or 7 gill slits, one dorsal fin</text>
+    <text
+       transform="translate(67.45,367.5)"
+       id="text37"
+       style="font-size:9px">5 gill slits,</text>
+    <text
+       transform="translate(67.45,380.6499)"
+       id="text43"
+       style="font-size:9px">2 dorsal fins</text>
+    <text
+       transform="translate(109.4502,325.5)"
+       id="text45"
+       style="font-size:10px">No fin spines</text>
+    <text
+       transform="translate(111.4502,415.5)"
+       id="text47"
+       style="font-size:10px">Dorsal fin spines</text>
+    <text
+       transform="translate(161.7002,283.1997)"
+       id="text49"
+       style="font-size:9px">Mouth behind</text>
+    <text
+       transform="translate(161.7002,296.3501)"
+       id="text51"
+       style="font-size:9px">front of eyes</text>
+    <text
+       transform="translate(215.2002,251.5498)"
+       id="text53"
+       style="font-size:9px">Nictitating eyelids, spiral</text>
+    <text
+       transform="translate(215.2002,264.6997)"
+       id="text59"
+       style="font-size:9px">or scroll intestinal valve</text>
+    <text
+       transform="translate(218.3999,309.5)"
+       id="text61"
+       style="font-size:9px">No nictitating eyelids,</text>
+    <text
+       transform="translate(218.3999,322.6499)"
+       id="text63"
+       style="font-size:9px">ring intestinal valve</text>
+    <text
+       transform="translate(170.4502,371.5)"
+       id="text65"
+       style="font-size:10px">Mouth well in front of eyes</text>
+    <text
+       transform="translate(382.3999,20.2998)"
+       id="text67"
+       style="font-size:13px">SQUATINIFORMES</text>
+    <text
+       transform="translate(382.3999,35.7998)"
+       id="text69"
+       style="font-size:12px;fill:#666666">Triassic onwards</text>
+    <text
+       transform="translate(382.3999,69.3501)"
+       id="text71"
+       style="font-size:13px">PRISTIOPHORIFORMES</text>
+    <text
+       transform="translate(382.3999,84.8501)"
+       id="text73"
+       style="font-size:12px;fill:#666666">Jurassic onwards</text>
+    <text
+       transform="translate(382.3999,153.6001)"
+       id="text75"
+       style="font-size:13px">SQUALIFORMES</text>
+    <text
+       transform="translate(382.3999,169.1001)"
+       id="text77"
+       style="font-size:12px;fill:#666666">Jurassic onwards</text>
+    <text
+       transform="translate(382.3999,213.3501)"
+       id="text79"
+       style="font-size:13px">HEXANCHIFORMES</text>
+    <text
+       transform="translate(382.3999,228.8501)"
+       id="text81"
+       style="font-size:12px;fill:#666666">Permian onwards</text>
+    <text
+       transform="translate(382.3999,258.3501)"
+       id="text83"
+       style="font-size:13px">CARCHARHINIFORMES</text>
+    <text
+       transform="translate(382.3999,273.8501)"
+       id="text85"
+       style="font-size:12px;fill:#666666">Jurassic onwards</text>
+    <text
+       transform="translate(382.3999,317.2998)"
+       id="text87"
+       style="font-size:13px">LAMNIFORMES</text>
+    <text
+       transform="translate(382.3999,332.7998)"
+       id="text89"
+       style="font-size:12px;fill:#666666">Jurassic onwards</text>
+    <text
+       transform="translate(382.3999,375.4497)"
+       id="text91"
+       style="font-size:13px">ORECTOLOBIFORMES</text>
+    <text
+       transform="translate(382.3999,390.9497)"
+       id="text93"
+       style="font-size:12px;fill:#666666">Jurassic onwards</text>
+    <text
+       transform="translate(382.3999,416.2998)"
+       id="text95"
+       style="font-size:13px">HETERODONTIFORMES</text>
+    <text
+       transform="translate(382.3999,431.7998)"
+       id="text97"
+       style="font-size:12px;fill:#666666">Triassic onwards</text>
+    <text
+       transform="translate(4.45,453.4497)"
+       id="text99"
+       style="font-size:22px">Extant Shark Orders</text>
+    <text
+       transform="translate(4.45,473.6997)"
+       id="text101"
+       style="font-size:15px;fill:#666666">Recognisable external characteristics</text>
+  </g>
+</svg>
