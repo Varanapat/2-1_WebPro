@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 - 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="div1"></div>
+
+    <script> 
+         function superheroes_arai_wa(data) {
+
+            let text = 'SquadName : ' + data.squadName  + '<br>';
+            text += 'Hometown : ' + data.homeTown + '<br>';
+            text += 'Formed : ' + data.formed + '<br>';
+            text += 'Active : ' + data.active + '<br>';
+            text += '<hr>'
+
+            // เข้าไปเอาข้อมูลใน member เลยต้องเข้าลูปไปเอา
+            for (d of data.members){
+                text += '<p>' + d.name + ' (' + d.age + ')</p>';
+                
+                text += '<ul>';
+                for (p of d.powers){
+                    text += '<li> ' + p + '</li>';
+                }
+                text += '</ul>';
+            }
+
+            document.getElementById('div1').innerHTML = text;
+        }
+            fetch('superheroes.json') 
+                .then(response => response.json())
+                .then(data => superheroes_arai_wa(data))
+                .catch(error => console.log('error', error));
+
+    </script>
+    
+</body>
+</html>

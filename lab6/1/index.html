@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 - JSON</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p id="out"></p>
+
+
+    <script> 
+
+    // === ไฟล์ JSON ===
+    let person = {
+            "firstname":"John",
+            "lastname":"Doe",
+            "age":30,
+            "cars":[ "Toyota", "BMW", "BVD", "Honda","Hyndai"]
+        };
+
+    // === แปลงให้เป็น obj ===
+
+    // วิธีที่ 1
+    let text = document.getElementById('out').innerHTML = person.firstname;
+
+    // วิธีที่ 2
+    let text2 = 'Firstname : ' + person.firstname;
+    text2 += '<br>Lastname : ' + person.lastname;
+    text2 += '<br>Age : ' + person.age;
+    text2 += '<br>Cars : ' + person.cars[0];
+
+    document.getElementById('out').innerHTML = text2
+
+    </script>
+</body>
+</html>
