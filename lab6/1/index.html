@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab6 - 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Position</th>
+                <th>Address</th>
+            </tr>
+
+        </thead>
+        <tbody id="information-1">
+
+        </tbody>
+    </table>
+
+    <script>
+
+        function data_info(data) {
+            let text = '';
+            for (d of data) {
+                text += '<tr>';
+                text += '<td>' + d.id + '</td>';
+                text += '<td>' + d.FirstName + ' ' + d.LastName + '</td>';
+                text += '<td>' + d.Gender + '</td>';
+                text += '<td>' + d.Position + '</td>';
+                text += '<td>' + d.Address + '</td>';
+                text += '</tr>';
+            }
+            document.getElementById('information-1').innerHTML = text;
+        }
+
+        fetch('employees.json')
+            .then(response => response.json())
+            .then(data => data_info(data))
+            .catch(error => console.error('Fetch error:', error));
+
+    </script>
+
+
+</body>
+
+</html>
+
+
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab6 - 2</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="grid_dy">
+
+    </div>
+
+    <script>
+        function show_data(data) {
+            let parent = document.getElementsByClassName('grid_dy')[0];
+
+            data.forEach((d, index) => {
+                let container = document.createElement('div');
+                container.className = 'container';
+
+                // about image 
+                const img_url = d.gender === 'Female'
+                    ? 'http://webdev.it.kmitl.ac.th/labdocs/lab6/images/img_female.png'
+                    : 'http://webdev.it.kmitl.ac.th/labdocs/lab6/images/img_male.png';
+
+                let show_image = document.createElement('img');
+                show_image.src = img_url;
+                show_image.alt = d.name;
+                show_image.className = 'img_in_container';
+
+                // about name
+                let nameElement = document.createElement('p');
+                nameElement.textContent = `${index + 1}. ${d.name}`;
+                nameElement.className = 'name'
+
+                // score
+                let phy_score = document.createElement('p');
+                phy_score.textContent = 'Physics: ' + d.physics;
+
+                let mat_score = document.createElement('p');
+                mat_score.textContent = 'Maths: ' + d.maths;
+
+                let eng_score = document.createElement('p');
+                eng_score.textContent = 'English: ' + d.english;
+
+                // show everything
+                container.appendChild(show_image);
+                container.appendChild(nameElement);
+                container.appendChild(phy_score);
+                container.appendChild(mat_score);
+                container.appendChild(eng_score);
+
+                parent.appendChild(container);
+            });
+        }
+
+
+        fetch('student-score.json')
+            .then(response => response.json())
+            .then(data => show_data(data))
+            .catch(error => console.log('error', error));
+    </script>
+</body>
+
+</html>
