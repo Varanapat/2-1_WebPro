@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>รายการภาพยนตร์/ซีรีส์โปรด</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="logo">🎬</div>
+                <div>
+                    <div class="title">รายการภาพยนตร์/ซีรีส์โปรด</div>
+                    <div style="color:var(--muted);font-size:13px;margin-top:4px;">เพิ่มชื่อที่คุณชอบเพื่อเก็บไว้</div>
+                </div>
+            </div>
+
+            <form id="movieForm" class="row" onsubmit="return false;">
+                <input id="movieInput" type="text" placeholder="ชื่อภาพยนตร์หรือซีรีส์..."
+                    aria-label="ชื่อภาพยนตร์หรือซีรีส์" />
+                <button id="addBtn" class="btn btn-add" type="button">+ เพิ่ม</button>
+                <button id="clearBtn" class="btn btn-clear" type="button">🗑 ลบทั้งหมด</button>
+            </form>
+
+            <div id="listArea" class="list" aria-live="polite">
+                <!-- รายการจะแสดงที่นี่ -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (() => {
+            const STORAGE_KEY = 'fav_movies_v1';
+            const input = document.getElementById('movieInput');
+            const addBtn = document.getElementById('addBtn');
+            const clearBtn = document.getElementById('clearBtn');
+            const listArea = document.getElementById('listArea');
+
+            // อ่านจาก localStorage (คืนค่าเป็น array)
+            function readItems() {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    return raw ? JSON.parse(raw) : [];
+                } catch (e) {
+                    console.error('อ่าน localStorage ผิดพลาด', e);
+                    return [];
+                }
+            }
+
+            // เขียนลง localStorage
+            function saveItems(items) {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+            }
+
+            // สร้าง DOM ของรายการ
+            function renderList() {
+                const items = readItems();
+                listArea.innerHTML = '';
+                if (!items.length) {
+                    const el = document.createElement('div');
+                    el.className = 'empty';
+                    el.textContent = 'ยังไม่มีรายการโปรด';
+                    listArea.appendChild(el);
+                    return;
+                }
+
+                items.forEach((title, idx) => {
+                    const wrap = document.createElement('div');
+                    wrap.className = 'item';
+
+                    const left = document.createElement('div');
+                    left.className = 'meta';
+                    const icon = document.createElement('div');
+                    icon.className = 'movie-icon';
+                    icon.textContent = '🎞️';
+                    const txt = document.createElement('div');
+                    txt.textContent = title;
+                    left.appendChild(icon);
+                    left.appendChild(txt);
+
+                    const btn = document.createElement('button');
+                    btn.className = 'btn-del';
+                    btn.textContent = 'ลบ';
+                    btn.setAttribute('aria-label', `ลบ ${title}`);
+                    btn.addEventListener('click', () => {
+                        deleteItem(idx);
+                    });
+
+                    wrap.appendChild(left);
+                    wrap.appendChild(btn);
+                    listArea.appendChild(wrap);
+                });
+            }
+
+            // เพิ่ม item ใหม่
+            function addItem() {
+                const v = input.value.trim();
+                if (!v) {
+                    input.focus();
+                    return;
+                }
+                const items = readItems();
+                items.push(v);
+                saveItems(items);
+                input.value = '';
+                renderList();
+            }
+
+            // ลบรายการตาม index
+            function deleteItem(index) {
+                const items = readItems();
+                if (index < 0 || index >= items.length) return;
+                items.splice(index, 1);
+                saveItems(items);
+                renderList();
+            }
+
+            // ลบทั้งหมด (ยืนยันก่อน)
+            function clearAll() {
+                const items = readItems();
+                if (!items.length) return;
+                if (!confirm('ต้องการลบรายการทั้งหมดหรือไม่?')) return;
+                localStorage.removeItem(STORAGE_KEY);
+                renderList();
+            }
+
+            // event listeners
+            addBtn.addEventListener('click', addItem);
+            clearBtn.addEventListener('click', clearAll);
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') addItem();
+            });
+
+            // initial render
+            renderList();
+        })();
+    </script>
+</body>
+
+</html>
