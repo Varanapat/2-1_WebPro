@@ -1,12 +1,95 @@
+Web File Manager
+Search
+ Upload
+ New Item
+ 67070077
+File "index.html"
+
+Host Path: /lab6/3/index.html
+File size: 2.35 KB
+MIME-type: text/html
+Charset: utf-8
+
+  
+ Open
+ Edit
+ 
+ Advanced Editor
+ 
+ Back
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab6 - 3</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    
+
+    <h1>แบบทดสอบ</h1>
+    <div id="quiz"></div>
+    <button id="submitBtn">Submit</button>
+    <div id="result" class="result"></div>
+
+    <script>
+        let quizData = [];
+
+        // โหลดข้อมูลจากไฟล์ JSON
+        fetch('questionAnswerData.json')
+            .then(res => res.json())
+            .then(data => {
+                quizData = data;
+                renderQuiz(data);
+            });
+
+        function renderQuiz(data) {
+            const quizContainer = document.getElementById('quiz');
+            quizContainer.innerHTML = '';
+
+            data.forEach((item, index) => {
+                // คำถาม
+                const qEl = document.createElement('div');
+                qEl.className = 'question';
+                qEl.textContent = `${index + 1}. ${item.question}`;
+                quizContainer.appendChild(qEl);
+
+                // คำตอบ
+                const ansDiv = document.createElement('div');
+                ansDiv.className = 'answers';
+
+                ['a', 'b', 'c'].forEach(letter => {
+                    const ansLabel = document.createElement('label');
+                    const ansInput = document.createElement('input');
+                    ansInput.type = 'radio';
+                    ansInput.name = `question${index}`;
+                    ansInput.value = letter;
+
+                    ansLabel.appendChild(ansInput);
+                    ansLabel.appendChild(document.createTextNode(` ${letter.toUpperCase()}. ${item.answers[letter]}`));
+                    ansDiv.appendChild(ansLabel);
+                });
+
+                quizContainer.appendChild(ansDiv);
+            });
+        }
+
+        document.getElementById('submitBtn').addEventListener('click', () => {
+            let score = 0;
+
+            quizData.forEach((item, index) => {
+                const selected = document.querySelector(`input[name="question${index}"]:checked`);
+                if (selected && selected.value === item.answers.correct) {
+                    score++;
+                }
+            });
+
+            document.getElementById('result').textContent = `You got ${score} out of ${quizData.length} correct.`;
+        });
+    </script>
+
 </body>
+
 </html>
